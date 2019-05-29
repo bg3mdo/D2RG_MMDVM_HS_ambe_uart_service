@@ -13,7 +13,7 @@ dtc -@ -I dts -O dtb -o sc16is752-spi0-ce0.dtb sc16is752-spi0-ce0.dts
 ```
 Adding :
 ```console
-dtoverlay=sc16is752-spi0
+dtoverlay=sc16is752-spi0-ce0
 ```
 to config.txt under /boot
 
