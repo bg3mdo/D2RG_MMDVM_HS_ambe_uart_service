@@ -27,7 +27,7 @@
              reg = <0>; /* CE0 */
              spi-max-frequency = <4000000>;
              interrupt-parent = <&gpio>;
-             interrupts = <24 0x2>; /* gpio 21, falling edge */
+             interrupts = <24 0x2>; /* gpio 24, falling edge */
              clocks = <&klok>;
 
              klok: klok {
