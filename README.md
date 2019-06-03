@@ -21,7 +21,7 @@ Then allocate serial UART interfaces to `/dev/ttySC0` and `/dev/ttySC1` - A and 
 
 
 
-# Patch a Pi-Star under terminal:
+# Patch the Pi-Star under terminal:
 
 ```console
 rpi-rw
@@ -37,3 +37,20 @@ sudo mv sc16is752-spi0-ce0.dtb /boot/overlays
 sudo echo "dtoverlay=sc16is752-spi0-ce0" >> /boot/config.txt
 ```
 Setting up everything as normal, and go to pi-star expert mode, in the MMDVMhost, you change modem port to `/dev/ttySC0` and apply settings.
+
+
+# Flash a firmware for D2RG MMDVM HS AMBE
+
+Credit to Andy(CA6JAU)
+
+```console
+curl -OL https://raw.github.com/juribeparada/MMDVM_HS/master/scripts/install_fw_d2rg_mmdvmhs.sh
+
+chmod +x install_fw_d2rg_mmdvmhs.sh
+
+sh install_fw_d2rg_mmdvmhs.sh
+```
+
+# D2RG MMDVM HS AMBE hardware prototype
+
+This project is supported by Bruce(VE2GZI).
