@@ -24,11 +24,13 @@ Under Pi-Star terminal:
 ```console
 sudo rpi-rw
 
+sudo su
+
 curl -OL https://raw.githubusercontent.com/bg3mdo/D2RG_MMDVM_HS_ambe_uart_service/master/sc16is752-spi0-ce0.dts
 
 dtc -@ -I dts -O dtb -o sc16is752-spi0-ce0.dtb sc16is752-spi0-ce0.dts
 
 sudo mv sc16is752-spi0-ce0.dtb /boot/overlays
 
-echo "dtoverlay=sc16is752-spi0-ce0" >> /boot/config.txt
+sudo echo "dtoverlay=sc16is752-spi0-ce0" >> /boot/config.txt
 ```
