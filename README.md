@@ -19,10 +19,12 @@ to config.txt under /boot (SD Card)
 
 Then allocate serial UART interfaces to `/dev/ttySC0` and `/dev/ttySC1` - A and B, in RPi.
 
-Under Pi-Star terminal:
+
+
+# Patch a Pi-Star under terminal:
 
 ```console
-sudo rpi-rw
+rpi-rw
 
 sudo su
 
@@ -34,3 +36,4 @@ sudo mv sc16is752-spi0-ce0.dtb /boot/overlays
 
 sudo echo "dtoverlay=sc16is752-spi0-ce0" >> /boot/config.txt
 ```
+Setting up everything as normal, and go to pi-star expert mode, in the MMDVMhost, you change modem port to `/dev/ttySC0` and apply settings.
