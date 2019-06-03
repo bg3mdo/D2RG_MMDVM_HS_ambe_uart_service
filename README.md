@@ -18,3 +18,17 @@ dtoverlay=sc16is752-spi0-ce0
 to config.txt under /boot (SD Card)
 
 Then allocate serial UART interfaces to `/dev/ttySC0` and `/dev/ttySC1` - A and B, in RPi.
+
+Under Pi-Star terminal:
+
+```console
+sudo rpi-rw
+
+curl -OL https://raw.githubusercontent.com/bg3mdo/D2RG_MMDVM_HS_ambe_uart_service/master/sc16is752-spi0-ce0.dts
+
+dtc -@ -I dts -O dtb -o sc16is752-spi0-ce0.dtb sc16is752-spi0-ce0.dts
+
+sudo mv sc16is752-spi0-ce0.dtb /boot/overlays
+
+echo "dtoverlay=sc16is752-spi0-ce0" >> /boot/config.txt
+```
